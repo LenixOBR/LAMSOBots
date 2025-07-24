@@ -5,7 +5,6 @@
 
 TwoWheeler::TwoWheeler(int L, int R)
     : _motorL(L), _motorR(R){
-    _speed = 255;  // Default speed to max
 }
 
 void TwoWheeler::coast()
@@ -20,12 +19,12 @@ void TwoWheeler::stop()
     _motorR.run(BRAKE);
 }
 
-void TwoWheeler::setSpeed(int speed)
+void TwoWheeler::setSpeed(int speedL, int speedR)
 {
-    _speed = speed;
-    _motorL.setSpeed(speed);
-    _motorR.setSpeed(speed);
+    _motorL.setSpeed(speedL);
+    _motorR.setSpeed(speedR);
 }
+
 
 void TwoWheeler::forward()
 {
@@ -162,11 +161,10 @@ void FourWheeler::stop()
 
 void FourWheeler::setSpeed(int speed)
 {
-    _speed = speed;
-    _motorFL.setSpeed(speed);
-    _motorFR.setSpeed(speed);
-    _motorBL.setSpeed(speed);
-    _motorBR.setSpeed(speed);
+    _motorFL.setSpeed(speedFL);
+    _motorFR.setSpeed(speedFR);
+    _motorBL.setSpeed(speedBL);
+    _motorBR.setSpeed(speedBR);
 }
 
 void FourWheeler::forward()

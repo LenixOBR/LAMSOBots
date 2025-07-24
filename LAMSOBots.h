@@ -21,7 +21,7 @@ class FourWheeler
 {
   public:
     FourWheeler(int FL, int FR, int BL, int BR);
-    void setSpeed(int speed);
+    void setSpeed(int speedFL, int speedFR, int speedBL, int speedBR)
     void forward();
     void forwardFor(unsigned long ms);
     void backward();
@@ -39,7 +39,6 @@ class FourWheeler
     void move(int speedL, int speedR);
 
   private:
-    int _speed;
     AF_DCMotor _motorFL;
     AF_DCMotor _motorFR;
     AF_DCMotor _motorBL;
@@ -52,7 +51,7 @@ class TwoWheeler
 {
   public:
     TwoWheeler(int L, int R);
-    void setSpeed(int speed);
+    void setSpeed(int speedL, int speedR);
     void forward();
     void forwardFor(unsigned long ms);
     void backward();
@@ -69,7 +68,6 @@ class TwoWheeler
     void stop();
     void coast();
   private:
-    int _speed;
     AF_DCMotor _motorL;
     AF_DCMotor _motorR;
 };
