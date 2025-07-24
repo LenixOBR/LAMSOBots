@@ -116,7 +116,7 @@ void TwoWheeler::turnLeft()
 
 void TwoWheeler::turnRightFor(unsigned long ms)
 {
-    _motorR.run(BRAKE)
+    _motorR.run(BRAKE);
     _motorL.run(FORWARD);
 
     delay(ms);
@@ -126,7 +126,7 @@ void TwoWheeler::turnRightFor(unsigned long ms)
 
 void TwoWheeler::turnRight()
 {
-    _motorR.run(BRAKE)
+    _motorR.run(BRAKE);
     _motorL.run(FORWARD);
 }
 
