@@ -1,7 +1,7 @@
 /*
-  FourWheeler.h - Library for moving FourWheeler robots.
+  LAMSOBots.h - Library for Adafruit Motor Shield based robots.
   Created by Lenix Team, March 13, 2025
-  Released into the public domain.
+  Released with a LPGPL License.
 */
 
 /*
